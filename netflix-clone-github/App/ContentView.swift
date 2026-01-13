@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var showSplash: Bool = true
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Group{
+            if showSplash {
+                NetflixSplashView(showSplash: $showSplash)
+            }else{
+                VStack {
+                    Image(systemName: "globe")
+                        .imageScale(.large)
+                        .foregroundStyle(.tint)
+                    Text("Hello, world!")
+                }
+                .padding()
+                .transition(.opacity.combined(with: .move(edge: .trailing)))
+            }
         }
-        .padding()
+        .animation(.easeIn(duration: 0.5),  value: showSplash)
+        
     }
 }
 
