@@ -56,10 +56,9 @@ struct NetflixSplashView: View {
                 isAnimating = true
             }
             DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-                withAnimation{
+                withAnimation(.easeInOut(duration: 0.5)) {
                     viewScale = 2
                     opacity = 0
-                    
                     showSplash = false
                 }
                 
