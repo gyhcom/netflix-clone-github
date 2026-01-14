@@ -13,14 +13,9 @@ struct ContentView: View {
         Group{
             if showSplash {
                 NetflixSplashView(showSplash: $showSplash)
+                    .transition(.opacity.combined(with: .move(edge: .leading)))
             }else{
-                VStack {
-                    Image(systemName: "globe")
-                        .imageScale(.large)
-                        .foregroundStyle(.tint)
-                    Text("Hello, world!")
-                }
-                .padding()
+                OnboardingView()
                 .transition(.opacity.combined(with: .move(edge: .trailing)))
             }
         }
