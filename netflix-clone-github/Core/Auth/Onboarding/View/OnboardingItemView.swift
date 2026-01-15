@@ -31,7 +31,6 @@ struct OnboardingItemView: View {
                         Text("Create a Netflix account and more at")
                             .foregroundStyle(.white)
                         Button("netflix.com/more"){
-                            
                         }
                         .foregroundStyle(.blue)
                     }
