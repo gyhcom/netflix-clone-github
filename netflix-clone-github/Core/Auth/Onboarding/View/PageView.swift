@@ -43,7 +43,7 @@ struct IndicatorsView: View{
                     .frame(width: index == currentIndex ? 12: 10,
                            height: index == currentIndex ? 12: 10
                     )
-                    .animation(.spring(response: 0.25), value: index)
+                    .animation(.spring(duration : 0.25), value: index)
             }
         }
     }

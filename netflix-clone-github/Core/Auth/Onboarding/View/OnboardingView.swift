@@ -20,14 +20,19 @@ struct OnboardingView: View {
                     }
                     .frame(width: 100, height: 100)
                     .foregroundStyle(.white)
+                    .tag(0)
                     VStack{
                         Text("Page 2")
                     }
+                    .frame(width: 100, height: 100)
                     .foregroundStyle(.white)
+                    .tag(1)
                     VStack{
                         Text("Page 3")
                     }
+                    .frame(width: 100, height: 100)
                     .foregroundStyle(.white)
+                    .tag(2)
                 }
             }
             
