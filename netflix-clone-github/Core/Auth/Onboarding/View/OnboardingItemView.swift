@@ -34,7 +34,10 @@ struct OnboardingItemView: View {
                         }
                         .foregroundStyle(.blue)
                     }
+                    .font(.body)
+                    .multilineTextAlignment(.center)
                 }
+                .multilineTextAlignment(.center)
             }
         }
     }

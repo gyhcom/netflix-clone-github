@@ -13,12 +13,18 @@ struct OnboardingView: View {
     var body: some View {
         ZStack{
             Color.black.ignoresSafeArea()
-            VStack{
+            VStack(spacing: 16){
                 PageView(currentPage: $index, pages: 3){
                     ForEach(onboardingData) { item in
                         OnboardingItemView(onboardingModel: item)
+                            .tag(item.tag)
                     }
                 }
+                
+                ButtonNetflix(text: "Sign In"){
+                    print("Singing in screen")
+                }
+                    
             }
         }
         
