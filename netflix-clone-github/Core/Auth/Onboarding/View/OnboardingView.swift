@@ -14,6 +14,12 @@ struct OnboardingView: View {
         ZStack{
             Color.black.ignoresSafeArea()
             VStack(spacing: 16){
+                HStack {
+                    NetFlixLogoView()
+                    Spacer()
+                    InformationLinks(textColor: .white)
+                }
+                
                 PageView(currentPage: $index, pages: 3){
                     ForEach(onboardingData) { item in
                         OnboardingItemView(onboardingModel: item)
@@ -26,6 +32,7 @@ struct OnboardingView: View {
                 }
                     
             }
+            .padding(.horizontal)
         }
         
     }
