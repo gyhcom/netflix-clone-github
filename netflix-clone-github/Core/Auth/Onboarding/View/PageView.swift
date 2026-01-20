@@ -10,22 +10,35 @@ import SwiftUI
 struct PageView<Content: View> :  View {
     @Binding var currentPage: Int
     var pages: Int
+    var onComplete: (Bool) -> Void
     var content: Content
     
-    init(currentPage: Binding<Int>, pages: Int, @ViewBuilder content: () -> Content) {
+    init(
+        currentPage: Binding<Int>,
+        pages: Int,
+    onComplete: @escaping (Bool) -> Void = { _ in },
+        @ViewBuilder content: () -> Content
+        
+    ) {
         self._currentPage = currentPage
         self.pages = pages
         self.content = content()
+        self.onComplete = onComplete
     }
     
     
     var body: some View {
         TabView (selection: $currentPage){
             content
+            
         }
         
-        
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+        .onChange(of: currentPage) { oldValue, newValue in
+            if newValue == pages - 1 {
+                onComplete(true)
+            }
+        }
         
         IndicatorsView(currentIndex: currentPage, pages: pages)
     }

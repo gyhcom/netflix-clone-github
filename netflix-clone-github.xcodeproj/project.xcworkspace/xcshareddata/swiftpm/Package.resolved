@@ -1,0 +1,15 @@
+{
+  "originHash" : "53c07b321066c47dff3b17e78d92a39dcdbdbdb1d072f5932300a3e8c3250168",
+  "pins" : [
+    {
+      "identity" : "toastui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/debuging-life/toastUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b9f841cd1d85723656fa79bc19430b9404573361"
+      }
+    }
+  ],
+  "version" : 3
+}
