@@ -15,6 +15,7 @@ struct ContentView: View {
                 NetflixSplashView(showSplash: $showSplash)
                     .transition(.opacity.combined(with: .move(edge: .leading)))
             }else{
+                
                 OnboardingView()
                 .transition(.opacity.combined(with: .move(edge: .trailing)))
             }

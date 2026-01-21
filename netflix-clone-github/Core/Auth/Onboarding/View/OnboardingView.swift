@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import ToastUI
 
 struct OnboardingView: View {
     @State var index : Int = 0
+    @State var showOnboardingConfiramtion: Bool = false
+    @AppStorage("onboardingCompleted") var onboardingCompleted: Bool = false
     let onboardingData = OnboardingItem.onboardingData
     var body: some View {
         ZStack{
@@ -24,7 +27,7 @@ struct OnboardingView: View {
                     currentPage: $index,
                     pages: onboardingData.count,
                     onComplete: { value in
-                        print("I am at last page")
+                        showOnboardingConfiramtion = true
                     }
                 ){
                     ForEach(onboardingData) { item in
@@ -39,6 +42,31 @@ struct OnboardingView: View {
                 .padding(.bottom)
                     
             }
+            .padding(.horizontal)
+        }
+        .dialog(isPresented: $showOnboardingConfiramtion){
+            VStack{
+                Text("If you don't want to show onboarding on next launch press YES otherwise press NO")
+                    .multilineTextAlignment(.center)
+                HStack{
+                    ButtonNetflix(text: "Yes"){
+                        Image(systemName: "checkmark.app.fill")
+                            .foregroundStyle(.white)
+                    } action: {
+                        onboardingCompleted = true
+                        showOnboardingConfiramtion = false
+                    }
+                    ButtonNetflix(text: "No"){
+                        Image(systemName: "x.circle.fill")
+                            .foregroundStyle(.white)
+                    } action: {
+                        onboardingCompleted = true
+                        showOnboardingConfiramtion = false
+                    }
+                }
+                
+            }
+            .frame(height: 200)
             .padding(.horizontal)
         }
     }
