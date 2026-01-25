@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B972EC62F1F1DC000B8D5C2 /* ToastUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1B972EC52F1F1DC000B8D5C2 /* ToastUI */; };
+		1B972ECF2F25E25000B8D5C2 /* SwiftUINavigation in Frameworks */ = {isa = PBXBuildFile; productRef = 1B972ECE2F25E25000B8D5C2 /* SwiftUINavigation */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B972ECF2F25E25000B8D5C2 /* SwiftUINavigation in Frameworks */,
 				1B972EC62F1F1DC000B8D5C2 /* ToastUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +73,7 @@
 			name = "netflix-clone-github";
 			packageProductDependencies = (
 				1B972EC52F1F1DC000B8D5C2 /* ToastUI */,
+				1B972ECE2F25E25000B8D5C2 /* SwiftUINavigation */,
 			);
 			productName = "netflix-clone-github";
 			productReference = 1B972E6D2F121F3600B8D5C2 /* netflix-clone-github.app */;
@@ -102,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				1B972EC42F1F1DC000B8D5C2 /* XCRemoteSwiftPackageReference "toastUI" */,
+				1B972ECD2F25E25000B8D5C2 /* XCRemoteSwiftPackageReference "SwiftUINavigation" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1B972E6E2F121F3600B8D5C2 /* Products */;
@@ -351,6 +355,14 @@
 				kind = branch;
 			};
 		};
+		1B972ECD2F25E25000B8D5C2 /* XCRemoteSwiftPackageReference "SwiftUINavigation" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/debuging-life/SwiftUINavigation";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -358,6 +370,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1B972EC42F1F1DC000B8D5C2 /* XCRemoteSwiftPackageReference "toastUI" */;
 			productName = ToastUI;
+		};
+		1B972ECE2F25E25000B8D5C2 /* SwiftUINavigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B972ECD2F25E25000B8D5C2 /* XCRemoteSwiftPackageReference "SwiftUINavigation" */;
+			productName = SwiftUINavigation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

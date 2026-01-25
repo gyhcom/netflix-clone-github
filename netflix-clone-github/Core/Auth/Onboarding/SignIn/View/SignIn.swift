@@ -15,12 +15,12 @@ struct SignIn: View {
     var body: some View {
         ZStack{
             Color.black.ignoresSafeArea()
-            VStack{
+            VStack(spacing: 20){
                 TextField(
-                  "",
-                  text: $email,
-                  prompt: Text("Email or phone number")
-                    .foregroundStyle(.white)
+                    "",
+                    text: $email,
+                    prompt: Text("Email or phone number")
+                        .foregroundStyle(.white)
                 )
                 .keyboardType(.emailAddress)
                 .foregroundStyle(.white)
@@ -34,10 +34,10 @@ struct SignIn: View {
                 
                 if showPassword {
                     TextField(
-                      "",
-                      text: $email,
-                      prompt: Text("Email or phone number")
-                        .foregroundStyle(.white)
+                        "",
+                        text: $password,
+                        prompt: Text("Password")
+                            .foregroundStyle(.white)
                     )
                     .overlay {
                         VStack{
@@ -85,8 +85,31 @@ struct SignIn: View {
                     .cornerRadius(4)
                 }
                 
+                HStack {
+                    Button("Forgot Password"){
+                        
+                    }
+                    .font(.headline)
+                    .foregroundStyle(.white)
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
+                ButtonNetflix(text: "SIGN IN"){
+                    
+                }
+                .padding(.top)
+                Text("OR")
+                    .foregroundStyle(.white.opacity(0.5))
                 
+                HStack{
+                    Text("Don't have an account?")
+                    Button("Sign Up") {
+                        
+                    }
+                }
+                .foregroundStyle(.white)
             }
+            .padding(.horizontal)
+            
         }
     }
 }

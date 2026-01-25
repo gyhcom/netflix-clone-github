@@ -1,6 +1,15 @@
 {
-  "originHash" : "53c07b321066c47dff3b17e78d92a39dcdbdbdb1d072f5932300a3e8c3250168",
+  "originHash" : "f4d7aa807716ea91bc809a5a2a31cde8790877405c3059b653a3782432497d39",
   "pins" : [
+    {
+      "identity" : "swiftuinavigation",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/debuging-life/SwiftUINavigation",
+      "state" : {
+        "branch" : "main",
+        "revision" : "fa58bbcd3b18a32529f577372a30ac9b6f49d045"
+      }
+    },
     {
       "identity" : "toastui",
       "kind" : "remoteSourceControl",
