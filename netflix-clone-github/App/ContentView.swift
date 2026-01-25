@@ -18,7 +18,7 @@ struct ContentView: View {
             }else{
                 switch onboardingCompleted {
                     case true:
-                    SignIn()
+                    AuthCoordinatorView()
                         .transition(.opacity.combined(with: .move(edge: .trailing)))
                 case false:
                     OnboardingView()
