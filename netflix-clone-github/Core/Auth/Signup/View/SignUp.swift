@@ -2,13 +2,15 @@
 //  SwiftUIView.swift
 //  netflix-clone-github
 //
-//  Created by gyhmac on 1/22/26.
+//  Created by gyhmac on 1/25/26.
 //
 
 import SwiftUI
 import SwiftUINavigation
-struct SignIn: View {
-    @Environment(\.authCoordinator) var authCoordinator
+
+struct SignUp: View {
+    
+    @Environment(\.authCoordinator) var authCoording
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showPassword: Bool = false
@@ -95,16 +97,16 @@ struct SignIn: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
                 ButtonNetflix(text: "SIGN IN"){
-                    
+                    authCoording.navigateBack()
                 }
                 .padding(.top)
                 Text("OR")
                     .foregroundStyle(.white.opacity(0.5))
                 
                 HStack{
-                    Text("Don't have an account?")
+                    Text("Already have an account?")
                     Button("Sign Up") {
-                        authCoordinator.push(.signup)
+                        authCoording.push(.signup)
                     }
                 }
                 .foregroundStyle(.white)
@@ -116,5 +118,6 @@ struct SignIn: View {
 }
 
 #Preview {
-    SignIn()
+    SignUp()
 }
+

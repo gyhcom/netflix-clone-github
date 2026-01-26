@@ -13,10 +13,10 @@ struct AuthCoordinatorView: View {
             SignIn()
                 .navigationBarBackButtonHidden()
                 .toolbar {
-                    ToolbarItem(placement: .topBarLeading){
-                        BackButton()
-                    }
-                    .sharedBackgroundVisibility(.hidden)
+//                    ToolbarItem(placement: .topBarLeading){
+//                        BackButton()
+//                    }
+//                    .sharedBackgroundVisibility(.hidden)
                     
                     ToolbarItem(placement: .principal){
                         NetFlixLogoView()
