@@ -18,7 +18,7 @@ struct OnboardingView: View {
             Color.black.ignoresSafeArea()
             VStack(spacing: 16){
                 HStack {
-                    NetFlixLogoView()
+                    NetflixLogoView()
                     Spacer()
                     InformationLinks(textColor: .white)
                 }

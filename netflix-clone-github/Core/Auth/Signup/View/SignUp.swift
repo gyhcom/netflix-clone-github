@@ -105,8 +105,8 @@ struct SignUp: View {
                 
                 HStack{
                     Text("Already have an account?")
-                    Button("Sign Up") {
-                        authCoording.push(.signup)
+                    Button("Sign In") {
+                        authCoording.push(.signin)
                     }
                 }
                 .foregroundStyle(.white)

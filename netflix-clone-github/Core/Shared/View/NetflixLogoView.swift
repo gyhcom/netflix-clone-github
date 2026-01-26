@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NetFlixLogoView: View {
+struct NetflixLogoView: View {
     let text: String = "NETFLIX"
     var body: some View {
         HStack(spacing: 2) {
@@ -37,5 +37,5 @@ struct NetFlixLogoView: View {
 }
 
 #Preview {
-    NetFlixLogoView()
+    NetflixLogoView()
 }
