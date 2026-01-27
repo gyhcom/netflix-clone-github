@@ -8,8 +8,35 @@
 import SwiftUI
 
 struct VerifyEmail: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    var body: some View{
+        ZStack{
+            LinearGradient(
+                colors: [
+                    Color(
+                        red: 0.0,
+                        green: 0.0,
+                        blue: 0.0
+                    ),
+                    Color(
+                        red: 0.2431372549,
+                        green: 0.0,
+                        blue: 0.0
+                    ),
+                    Color(
+                        red: 0.2431372549,
+                        green: 0.0,
+                        blue: 0.0
+                    ),
+                    Color(
+                        red: 0.0,
+                        green: 0.0,
+                        blue: 0.0
+                    ),
+                ],
+                startPoint: .top,
+                endPoint: .bottom
+            ).ignoresSafeArea()
+        }
     }
 }
 
