@@ -10,7 +10,7 @@ import SwiftUINavigation
 
 struct SignUp: View {
     
-    @Environment(\.authCoordinator) var authCoording
+    @Environment(\.authCoordinator) var authCoordinator
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showPassword: Bool = false
@@ -96,8 +96,8 @@ struct SignUp: View {
                     .foregroundStyle(.white)
                 }
                 .frame(maxWidth: .infinity, alignment: .trailing)
-                ButtonNetflix(text: "SIGN IN"){
-                    authCoording.navigateBack()
+                ButtonNetflix(text: "SIGN UP"){
+                    authCoordinator.push(.verifyEmail)
                 }
                 .padding(.top)
                 Text("OR")
@@ -106,7 +106,7 @@ struct SignUp: View {
                 HStack{
                     Text("Already have an account?")
                     Button("Sign In") {
-                        authCoording.push(.signin)
+                        authCoordinator.push(.signin)
                     }
                 }
                 .foregroundStyle(.white)
